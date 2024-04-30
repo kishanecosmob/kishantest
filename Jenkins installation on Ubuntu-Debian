@@ -1,0 +1,70 @@
+Jenkins installation on Ubuntu/Debian
+
+sudo apt update
+sudo apt install openjdk-11-jdk -y
+
+
+sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
+  https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+
+echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+
+sudo apt-get update
+
+sudo apt-get install jenkins -y
+
+-----------------------
+data store
+ls /var/lib/jenkins
+id jenkins
+
+
+/var/lib/jenkins/secrets/initialAdminPassword
+6ff25c25e49047539796a36b341aa0d4
+
+----------------------------------
+Jenkins - ubuntu
+ssh kishan@172.16.18.160
+kishan@123
+
+Nexus - centos
+ssh root@172.16.18.116
+ec0sm0bt
+
+Sonar - ubuntu
+ssh kishan@172.16.18.140
+kishan@123
+
+--------------------------------------
+
+Nexus server
+http://172.16.18.116:8081
+admin
+7a004af7-cbed-4f39-9375-e820197a1ecc
+New - ecosmob@123
+
+------------------------------------
+
+Jenkins Server
+http://172.16.18.160:8080/
+jenkins
+jenkins@123
+
+
+---------------------------------------
+
+SonarQube 
+
+http://172.16.18.140/projects?sort=analysis_date
+--------------------------------
+
+SonarQube token - 8137f20596c008e66f811e688b8b81a68fba3ad5
+
+
+
+
+
+
+
